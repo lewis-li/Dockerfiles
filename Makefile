@@ -45,8 +45,7 @@ build-mysql:
 	docker build -t eva/mysql ./mysql
 
 run-mysql:
-	docker run -i -d -p 3306:3306 -v ~/opt/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -t eva/mysql &&\
-	grant all privileges on *.* to root@'%' identifies by '123456';
+	docker run -i -d -p 3306:3306 -v ~/opt/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -t eva/mysql
 
 in-mysql:
 	docker run -i -p 3306:3306  -v ~/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -t eva/mysql /bin/bash
