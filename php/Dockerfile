@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
-        libpng12-dev \
-        && rm -r /var/lib/apt/lists/*
+        libpng12-dev # && rm -r /var/lib/apt/lists/*
 
 
 # Install PHP extensions
